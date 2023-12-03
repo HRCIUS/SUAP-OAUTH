@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block styles %}
+{% endblock styles %}
+
+{% block title %}{% block nav %}BOLETINS{% endblock nav %}{% endblock title %}
+
+{% block content %}
+    <div class="boletim">
+        <div class="d-flex my-3">
+            <h1 class='mx-auto '>Boletim Escolar</h1>
+        </div>
+        <div class="grid-container">
+            {% for disciplina in boletim_data %}
+            <div class="disciplina">
+                <span>{{ disciplina['disciplina'] }}</span>
+                <div class="nota">Nota Etapa 1: {{ disciplina['nota_etapa_1']['nota'] }}</div>
+                <div class="nota">Nota Etapa 2: {{ disciplina['nota_etapa_2']['nota'] }}</div>
+                <div class="nota">Nota Etapa 3: {{ disciplina['nota_etapa_3']['nota'] }}</div>
+                <div class="nota">Nota Etapa 4: {{ disciplina['nota_etapa_4']['nota'] }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

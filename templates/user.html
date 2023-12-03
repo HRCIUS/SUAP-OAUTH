@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+
+{% endblock %}
+{% block title %}{% block nav %}INFORMAÇÕES{% endblock nav %}{% endblock title %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row align-items-center">
+        <div class="perfil col-md-4 text-center">
+            <img src="https://suap.ifrn.edu.br{{ user_data['url_foto_150x200'] }}" alt="foto" class="rounded-img">
+        </div>
+        <div class="col-md-8 my-4">
+            <h2 class="user-name">{{ user_data['nome_usual'] }}</h2>
+            <ul class="list-group list-group-flush">
+                {% for field in user_data %}
+                    <li class="list-group-item infos">
+                        <span class="field">{{ field }}</span>: <span class="value">{{ user_data[field] }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

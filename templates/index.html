@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block styles %}
+
+{% endblock styles %}
+
+
+
+{% block content %}
+    <div class="container-fluid center-itens login-container">
+        <img src="static/imgs/if_logo.png" alt="Logo IFRN" class="logocont">
+        <h1>{% block title %} Login SUAP OAuth {% endblock %}</h1>
+            <a class='btn btn-success login-btn' href="{{url_for('login')}}">Login</a>
+    </div>
+
+{% endblock %}
