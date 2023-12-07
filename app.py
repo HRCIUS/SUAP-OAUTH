@@ -8,8 +8,8 @@ oauth = OAuth(app)
 
 oauth.register(
     name='suap',
-    client_id="CCoxFqURTZLn24T5F6sRArObeVA9BIblw0d9jike",
-    client_secret="fKJ5RscMKOJIGsWbcRTkFierkEoIXsAIjQJNIX03I10pFc4rEcDguYs8tKiDfwCbRUuD3VzKJFThm49z8LaloKAiJFZF4080dnwNOxG7MDZG8BhchQPalr60Ou86tj3L",
+    client_id="",
+    client_secret="",
     api_base_url='https://suap.ifrn.edu.br/api/',
     request_token_url=None,
     access_token_method='POST',
